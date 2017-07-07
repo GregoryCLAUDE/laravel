@@ -12,6 +12,8 @@
 */
 
 
-Route::get("/customers", function(){
-    return "Hello World";
-});
+// Route::get("/", function(){
+//     return "Hello World";
+// });
+
+Route::get("/customers","CustomerController@getAllCustomers");
