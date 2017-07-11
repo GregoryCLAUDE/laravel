@@ -9,6 +9,12 @@ class CustomerController extends Controller
 {
     public function getAllCustomers(){
       $customers=Customer::all();
-      return view ("customers/customers");
+      return view ("customers/customers", ["customers" => $customers]);
+    }
+
+    public function getCustomer($id){
+      $customer = Customer::where("id", $id)->get();
+      //dd($customer);
+      return view("customers/customer_detail", ["customer" => $customer]);
     }
 }

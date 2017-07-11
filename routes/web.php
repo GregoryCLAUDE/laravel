@@ -17,3 +17,5 @@
 // });
 
 Route::get("/customers","CustomerController@getAllCustomers");
+
+Route::get("customer/{id}", "CustomerController@getCustomer");

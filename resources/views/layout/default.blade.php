@@ -7,7 +7,6 @@
       @yield("content")
     </section>
 
-
   </body>
   @include("includes.footer")
 </html>
