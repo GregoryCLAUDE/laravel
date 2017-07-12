@@ -17,4 +17,17 @@ class CustomerController extends Controller
       //dd($customer);
       return view("customers/customer_detail", ["customer" => $customer]);
     }
+
+    public function updateCustomer(Request $request, $id){
+      $customer=Customer::find($id);
+      $customer->first_name = $request->first_name;
+      $customer->last_name = $request->last_name;
+      $customer->email = $request->email;
+      $customer->save();
+      return redirect("/customers");
+    }
+    public function deleteCustomer ($id){
+      $customer=Customer::destroy($id);
+      return "ok";
+    }
 }
