@@ -12,9 +12,7 @@
 */
 
 
-Route::get("/", function(){
-    return "Hello World";
-});
+Route::get("/", "CustomerController@welcome");
 
 Route::get("/customers","CustomerController@getAllCustomers");
 
@@ -23,3 +21,5 @@ Route::get("customer/{id}", "CustomerController@getCustomer");
 Route::post("updateCustomer/{id}", "CustomerController@updatecustomer");
 
 Route::get("deleteCustomer/{id}", "CustomerController@deleteCustomer");
+
+Route::post("/createCustomer", "CustomerController@createCustomer");

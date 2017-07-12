@@ -30,7 +30,7 @@
                   <input class="form-control" type="text" id="email" name="email" value="{{$detail->email}}">
                 </div>
               </div>
-            <button class="btn btn-success" type="submit" name="button">modify</button>
+            <button class="btn btn-warning" type="submit" name="button">update</button>
             <a href={{"/deleteCustomer/".$detail->id}} class="btn btn-danger" type="button" name="button"/>delete<a/>
           </form>
           @endforeach

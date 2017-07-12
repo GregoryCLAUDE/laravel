@@ -7,6 +7,10 @@ use App\Customer;
 
 class CustomerController extends Controller
 {
+    public function welcome(){
+      return view ("customers/create_customer");
+
+    }
     public function getAllCustomers(){
       $customers=Customer::all();
       return view ("customers/customers", ["customers" => $customers]);
@@ -26,8 +30,20 @@ class CustomerController extends Controller
       $customer->save();
       return redirect("/customers");
     }
+
     public function deleteCustomer ($id){
       $customer=Customer::destroy($id);
-      return "ok";
+      return redirect("/customers");
+    }
+
+    public function createCustomer (Request $request){
+
+      $customer = new Customer;
+
+      $customer->first_name = $request->first_name;
+      $customer->last_name = $request->last_name;
+      $customer->email = $request->email;
+      $customer->save();
+      return redirect("/customers");
     }
 }

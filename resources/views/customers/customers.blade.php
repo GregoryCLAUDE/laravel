@@ -1,4 +1,4 @@
-@extends("layout.default")
+@extends("layout/default")
 @section("content")
 <div id="page-wrapper">
   <div class="container-fluid">
