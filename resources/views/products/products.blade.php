@@ -1,12 +1,12 @@
-@extends("layout/default")
-@section("content")
+@extends("layout/default");
+@section("content");
 <div id="page-wrapper">
   <div class="container-fluid">
       <!-- Page Heading -->
       <div class="row">
           <div class="col-lg-12">
               <h1 class="page-header">
-                  Dashboard
+                Products
               </h1>
               <ol class="breadcrumb">
                   <li class="active">
@@ -21,32 +21,34 @@
 
         <thead>
         <tr>
-          <th>First name</th>
-          <th>Last name</th>
-          <th>Email</th>
+          <th>name</th>
+          <th>Quantity</th>
+          <th>Price</th>
           <th>Created at</th>
           <th>Details</th>
         </tr>
       </thead>
       <tbody>
-        @foreach ($customers as $customer )
+        @foreach ($products as $product )
         <tr>
-          <td>{{$customer->first_name}}</td>
-          <td>{{$customer->last_name}}</td>
-          <td>{{$customer->email}}</td>
-          <td>{{$customer->created_at}}</td>
+          <td>{{$product->name}}</td>
+          <td>{{$product->quantity}}</td>
+          <td>{{$product->price}}</td>
+          <td>{{$product->created_at}}</td>
           <td>
-            <a href={{"/customer/".$customer->id}}>Details</a>
+            <a href={{"/product/".$product->id}}>Details</a>
           </td>
         </tr>
         @endforeach
 
       </tbody>
-      <a href={{"customerNew"}} class="btn btn-success">New customer</a>
+      <a href={{"/productNew"}} class="btn btn-success">new product</a>
       </table>
     </div>
   </div>
 </div>
 
 
-@endsection
+
+
+@endsection;

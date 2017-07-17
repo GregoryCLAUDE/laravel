@@ -5,13 +5,13 @@
   <div class="form-group">
     <label for="first_name" class=" text-muted col-sm-2 control-label">First name</label>
       <div class="col-sm-10">
-        <input type="text" name="first_name" id="first_name" value="CISSE">
+        <input type="text" name="first_name" id="first_name">
       </div>
   </div>
   <div class="form-group">
     <label for="last_name" class="text-muted col-sm-2 control-label">Last name</label>
       <div class="col-sm-10">
-        <input type="text" name="last_name" id="last_name" value="morel">
+        <input type="text" name="last_name" id="last_name">
       </div>
   </div>
   <div class="form-group">

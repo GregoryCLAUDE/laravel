@@ -1,5 +1,5 @@
-@extends("layout/default")
-@section("content")
+@extends("layout/default");
+@section("content");
 <div id="page-wrapper">
   <div class="container-fluid">
       <!-- Page Heading -->
@@ -21,32 +21,30 @@
 
         <thead>
         <tr>
-          <th>First name</th>
-          <th>Last name</th>
-          <th>Email</th>
+          <th>Name</th>
           <th>Created at</th>
-          <th>Details</th>
+          <th>Updated at</th>
         </tr>
       </thead>
       <tbody>
-        @foreach ($customers as $customer )
+        @foreach ($groups as $group )
         <tr>
-          <td>{{$customer->first_name}}</td>
-          <td>{{$customer->last_name}}</td>
-          <td>{{$customer->email}}</td>
-          <td>{{$customer->created_at}}</td>
+          <td>{{$group->name}}</td>
+          <td>{{$group->created_at}}</td>
+          <td>{{$group->updated_at}}</td>
           <td>
-            <a href={{"/customer/".$customer->id}}>Details</a>
+            <a href={{"/groups/".$group->id}}>Details</a>
+
           </td>
         </tr>
         @endforeach
 
       </tbody>
-      <a href={{"customerNew"}} class="btn btn-success">New customer</a>
+      <a href={{"groupNew"}} class="btn btn-success">New group</a>
       </table>
     </div>
   </div>
 </div>
 
 
-@endsection
+@endsection;
